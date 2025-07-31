@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="MyBrand landing page with elegant design and mobile optimization" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Landing Page, Responsive, Dark Mode" />
+  <meta name="author" content="Payal" />
+  <title>MyBrand Landing Page</title>
+
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s, box-shadow 0.3s;
+      z-index: 1000;
+    }
+    header.scrolled {
+      background-color: #333;
+      color: #fff;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+    }
+    nav ul li a:hover {
+      color: #007bff;
+      font-weight: bold;
+    }
+    #darkToggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .btn {
+      background: #fff;
+      color: #333;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    form input,
+    form textarea {
+      display: block;
+      width: 80%;
+      margin: 1rem auto;
+      padding: 0.5rem;
+    }
+    form button {
+      padding: 0.5rem 1.5rem;
+    }
+    .hidden {
+      display: none;
+    }
+    /* Dark Mode */
+    .dark-mode {
+      background: #121212;
+      color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="logo">MyBrand</div>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkToggle">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to MyBrand</h1>
+    <p>Discover amazing features and a unique experience.</p>
+    <a href="#features" class="btn">Explore Features</a>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <p>Our platform offers smooth UX, mobile optimization, and sleek design.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>MyBrand is built for modern users who value elegance and speed.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="successMsg" class="hidden">✅ Message sent successfully!</p>
+  </section>
+
+  <script>
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("darkToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // Contact form success message
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
