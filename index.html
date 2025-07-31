@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="MyBrand landing page with elegant design and mobile optimization" />
-  <meta name="keywords" content="HTML, CSS, JavaScript, Landing Page, Responsive, Dark Mode" />
+  <meta name="description" content="Payal's MyBrand landing page showcasing responsive design and technical skills" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Responsive Design, Dark Mode" />
   <meta name="author" content="Payal" />
   <title>MyBrand Landing Page</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
-    /* Base styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
     }
     header {
       position: fixed;
@@ -94,10 +95,24 @@
     .hidden {
       display: none;
     }
-    /* Dark Mode */
+    footer {
+      background-color: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #007bff;
+    }
     .dark-mode {
       background: #121212;
       color: #eee;
+    }
+    .dark-mode footer {
+      background: #1f1f1f;
+      color: #ccc;
     }
   </style>
 </head>
@@ -123,12 +138,12 @@
 
   <section id="features">
     <h2>Features</h2>
-    <p>Our platform offers smooth UX, mobile optimization, and sleek design.</p>
+    <p>Our platform offers smooth UX, mobile optimization, dark mode, and sleek design.</p>
   </section>
 
   <section id="about">
-    <h2>About</h2>
-    <p>MyBrand is built for modern users who value elegance and speed.</p>
+    <h2>About Me</h2>
+    <p>Hi, I’m Payal — a B.Tech Computer Science Engineering student at Chitkara University. I specialize in responsive web design, creative coding, and interactive user experiences. I love solving algorithmic challenges and crafting projects that combine elegance with functionality.</p>
   </section>
 
   <section id="contact">
@@ -141,6 +156,14 @@
     </form>
     <p id="successMsg" class="hidden">✅ Message sent successfully!</p>
   </section>
+
+  <footer>
+    <p>Connect with me: 
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </p>
+    <p>© 2025 Payal. All rights reserved.</p>
+  </footer>
 
   <script>
     // Scroll effect
