@@ -1,192 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Payal's MyBrand landing page showcasing responsive design and technical skills" />
-  <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Responsive Design, Dark Mode" />
-  <meta name="author" content="Payal" />
-  <title>MyBrand Landing Page</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      transition: background 0.3s, color 0.3s;
-      scroll-behavior: smooth;
-    }
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: background 0.3s, box-shadow 0.3s;
-      z-index: 1000;
-    }
-    header.scrolled {
-      background-color: #333;
-      color: #fff;
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 1.3rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: inherit;
-    }
-    nav ul li a:hover {
-      color: #007bff;
-      font-weight: bold;
-    }
-    #darkToggle {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      text-align: center;
-      padding: 2rem;
-    }
-    .btn {
-      background: #fff;
-      color: #333;
-      padding: 0.8rem 1.5rem;
-      margin-top: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-    form input,
-    form textarea {
-      display: block;
-      width: 80%;
-      margin: 1rem auto;
-      padding: 0.5rem;
-    }
-    form button {
-      padding: 0.5rem 1.5rem;
-    }
-    .hidden {
-      display: none;
-    }
-    footer {
-      background-color: #f4f4f4;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    footer a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #007bff;
-    }
-    .dark-mode {
-      background: #121212;
-      color: #eee;
-    }
-    .dark-mode footer {
-      background: #1f1f1f;
-      color: #ccc;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<link rel="stylesheet" href="style.css">
 
 <body>
-  <header id="navbar">
-    <div class="logo">MyBrand</div>
-    <nav>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="darkToggle">🌙</button>
-    </nav>
-  </header>
+  <!-- follow me on github 
+https://github.com/arbiprog 
+the website designed by :@abdulldsgnr
+-->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">tutorials</a></li>
+      <li><a href="#">download </a></li>
+      <li><a href="#">features </a></li>
+      <li><a href="#">fAQs </a></li>
+      <li><img onclick="msg()" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/menu.png" draggable="false" alt=""></li>
+    </ul>
+    <div id="show">
+      <div class="cont-mn"><img class="cmn" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/logo.png" alt=""> <img onclick="msg2()" class="close" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/close.png" alt=""> </div>
+      <div class="links">
+        <div><a href="#"> tutorials </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
+        <div><a href="#"> download </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
+        <div><a href="#"> features </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
+        <div><a href="#"> FAQs </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
+      </div>
+    </div>
+    <div>
+      <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/logo.png" draggable="false" alt="">
+    </div>
+  </nav>
+  <div class="container-div-prt">
+    <div class="prt st">
+      <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/hero.svg" draggable="false" alt="">
+    </div>
+    <div class="prt sd">
+      <div class="ris">
+        <h1>
+          <span>Design </span><br> cases <br> for your <br> gadgets
+        </h1>
+        <button class="btn"><img class="icon2" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" alt=""> download app</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <section class="hero">
-    <h1>Welcome to MyBrand</h1>
-    <p>Discover amazing features and a unique experience.</p>
-    <a href="#features" class="btn">Explore Features</a>
-  </section>
+<!-- sections -->
+<section class="about">
+  <div class="div fir">
+    <h2>We're CaseCraft</h2>
+    <p>We bring your imaginations to life by giving you the power & ability to create amazing, outstanding, breathtaking & spectacular cases for your gadgets</p>
+    <button class="btn"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> How it works</button>
+    <img src="./images/shapes.png" alt="">
+  </div>
+  <div class="div sec">
+    <img style="width:100%; height: 100%;" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/aprs.png" alt="">
+  </div>
+</section>
 
-  <section id="features">
-    <h2>Features</h2>
-    <p>Our platform offers smooth UX, mobile optimization, dark mode, and sleek design.</p>
-  </section>
+<section class="features">
+  <div class="ftr">
+    <h3>A tool that makes you</h3>
+    <h2>A Superhero</h2>
+    <h3 style="font-weight: 300;">Stand upright, wear your cape and put on some tight<br /> superman pants.</h3>
+  </div>
+  <div class="worker">
+    <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/screen.png" draggable="false" alt="">
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Payal — a B.Tech Computer Science Engineering student at Chitkara University. I specialize in responsive web design, creative coding, and interactive user experiences. I love solving algorithmic challenges and crafting projects that combine elegance with functionality.</p>
-  </section>
+<section class="features">
+  <div class="ftr">
+    <h3>Get full access to</h3>
+    <h2>Photos & Patterns</h2>
+    <h3 style="font-weight: 300;">Explore photos, patterns, colors & gradients designed by the<br /> best designers or simply use yours</h3>
+  </div>
+  <div class="worker">
+    <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/screens2.png" draggable="false" alt="">
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p id="successMsg" class="hidden">✅ Message sent successfully!</p>
-  </section>
+<section class="why">
+  <div class="container-div-why">
+    <div class="dr">
+      <div class="tw">
+        <h3>Why CaseCraft?</h3>
+        <p>Your gadgets weep all day as they crave for a makeover or anything at all to cover their tender & expensive parts, now you'll not just be doing your wallet a favor by protecting them you'll also get to make them look good and blend with style</p>
+        <button class="btn"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" class="icon2" alt=""> download app</button>
+      </div>
+    </div>
+    <div class="dr">
+      <figure class="tw">
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/airpod.png" draggable="false" alt="">
+      </figure>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>Connect with me: 
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    </p>
-    <p>© 2025 Payal. All rights reserved.</p>
-  </footer>
+<section class="cover">
+  <div>
+    <img title="Play" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/play.png" alt="">
+    <h4>How CasCraft Works ?</h4>
+  </div>
+</section>
 
-  <script>
-    // Scroll effect
-    window.addEventListener("scroll", () => {
-      const header = document.getElementById("navbar");
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
+<section class="cta">
+  <div class="cont-btn">
+    <span>get started now</span>
+    <button class="btn"><img class="i" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/i1.png" alt="">
+      <span class="sp1">download on the</span> <br>
+      <span class="sp2">app store</span>
+    </button>
+    <button class="btn"><img class="i" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/i2.png" alt="">
+      <span class="sp1">download on the</span> <br>
+      <span class="sp2">play store</span>
+    </button>
 
-    // Dark mode toggle
-    const toggleBtn = document.getElementById("darkToggle");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
+  </div>
+  <div class="cont-post">
+  </div>
+</section>
 
-    // Contact form success message
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      document.getElementById("successMsg").classList.remove("hidden");
-    });
-  </script>
+<footer>
+  <div class="ftr-container">
+    <div class="fdb">
+      <img class="logo" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/band.png" alt="">
+      <div>
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/dribbble.png" alt="">
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Instagram.png" alt="">
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Twitter.png" alt="">
+      </div>
+    </div>
+
+    <div>
+      <h2>CaseCraft</h2>
+      <h5>Updates</h5>
+      <h5>Tutorials</h5>
+      <h5>Teams</h5>
+      <h5>Enterprise</h5>
+      <h5>Blog</h5>
+    </div>
+
+    <div>
+      <h2>platform</h2>
+      <h5>Web</h5>
+      <h5>IOS</h5>
+      <h5>android</h5>
+    </div>
+
+    <div>
+      <h2>about</h2>
+      <h5>Security</h5>
+      <h5>Company</h5>
+      <h5>Careers</h5>
+      <h5>Security</h5>
+    </div>
+  </div>
+</footer>
 </body>
+<script>
+// follow me on github
+// https://github.com/arbiprog
+// the website designed by :@abdulldsgnr
+function msg() {
+  document.getElementById("show").style.top = "0px";
+}
+function msg2() {
+  document.getElementById("show").style.top = "-610px";
+}
+
+</script>
 </html>
